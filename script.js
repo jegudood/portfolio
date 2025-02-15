@@ -18,9 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showSection(targetId) {
         sections.forEach(section => {
-            section.classList.remove("active");
+            if (section.classList.contains('active')) {
+                section.classList.add('fade-out');
+                setTimeout(() => {
+                    section.classList.remove('active', 'fade-out');
+                }, 400); // 👈 Match this with CSS transition duration if you change it
+            }
+            
             if (section.id === targetId) {
-                section.classList.add("active");
+                setTimeout(() => {
+                    section.classList.add('active');
+                }, 400); // 👈 Match this with CSS transition duration if you change it
             }
         });
     }
