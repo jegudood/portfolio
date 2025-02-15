@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeffrey Guandique - Game Developer/Programmer Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        h1 { color: #1E201E; }
-    </style>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Jeffrey Guandique</h1>
-    <h2>Game Developer / Programmer</h2>
-    <p>Welcome to my portfolio! Check out my projects below.</p>
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <div class="active-line"></div>
+        </ul>
+    </nav>
+    <div class="content">
+        <section id="home" class="section active">
+            <h1>Home</h1>
+            <p>Welcome to my portfolio!</p>
+        </section>
+        <section id="projects" class="section">
+            <h1>Projects</h1>
+            <p>Here are some of my works.</p>
+        </section>
+        <section id="contact" class="section">
+            <h1>Contact</h1>
+            <p>Reach me via email or social media.</p>
+        </section>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
