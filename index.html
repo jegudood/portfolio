@@ -5,41 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <div class="brand">
                 <div class="profile-pic">
-                    <!-- Change the src to your image path -->
                     <img src="assets/images/profilepic.jpg" alt="Your Name">
                 </div>
-                <!-- Change this to your name -->
                 <div class= "name-title">
-                  <div class="name">Name LastName</div>
-                  <div class="title">Title</div>
+                  <div class="name">Jeffrey Guandique</div>
+                  <div class="title">Video Game Programmer / Developer</div>
                 </div>
             </div>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <div class="active-line"></div>
-            </ul>
+            <div class="buttons">
+                <a href="https://www.linkedin.com/in/jeffreyguandique" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/jegudood" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="/portfolio/assets/documents/JEFFREY_A_GUANDIQUE_VGPROGRAMMER_RESUME25.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
+            </div>
         </div>
     </nav>
     <div class="content">
-        <section id="home" class="section active">
-            <h1>Home</h1>
-            <p>Welcome to my portfolio!</p>
-        </section>
-        <section id="projects" class="section">
-            <h1>Projects</h1>
-            <p>Here are some of my works.</p>
-        </section>
-        <section id="contact" class="section">
-            <h1>Contact</h1>
-            <p>Reach me via email or social media.</p>
+        <h1>About Me</h1>
+        <section id="main" class="section about">
+            <p style="text-align: justify">
+                Game programmer with 1+ year of experience, focused gameplay, in 3D games made with Unity Game Engine. Experience 
+                with UI and refactoring core game features into becoming scaleable. While primarily concentrated as a programmer, my 
+                background in Game & Level Designs helps me bridge between the Design & Arts aspects of game development.
+            </p>
         </section>
     </div>
     <script src="script.js"></script>
