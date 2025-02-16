@@ -1,4 +1,3 @@
-/* styles.css */
 :root {
   --div-color: #151515;
   --text-color: #ECDFCC;
@@ -23,14 +22,16 @@ nav {
     background: var(--div-color);
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    animation: fade-down 1.0s;
 }
 
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1000px;
+    max-width: 1300px;
     margin: 0 auto;
+    animation: fade-down 1.5s 0.3s backwards;    
 }
 
 .brand {
@@ -99,20 +100,11 @@ nav a.active {
     color: var(--background-color);
 }
 
-.active-line {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 9px;
-    background-color: #697565;
-    transition: transform 0.3s ease, width 0.3s ease;
-    pointer-events: none;
-}
-
 .content {
-    max-width: 1000px;
+    max-width: 1300px;
     margin: 0 auto;
     padding-top: 2rem;
+    animation: fade-up 1.0s;
 }
 
 .content :is(h1)
@@ -125,23 +117,97 @@ nav a.active {
 .section {
     display: none;
     padding: 1.5rem;
-    background-color: var(--content-background);
-    border-radius: 8px;
+    border-radius: 15px;
     margin-top: 1rem;
+    margin-bottom: 2rem;
     opacity: 0;
-    transform: translateX(30px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .section.about {
+    background-color: var(--content-background);
     display: block;
     opacity: 1;
-    transform: translateX(0);
 }
 
 p {
     line-height: 1.6;
     color: var(--text-color);
+}
+
+.content :is(h3)
+{
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+section.work
+{
+    max-width: 1300px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    background-color: var(--content-background);
+}
+.work-video
+{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin-bottom: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.work-video iframe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+section.workdesc
+{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+section.projects {
+    padding: 0rem;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    column-gap: 0px;
+    row-gap: 0px;
+    opacity: 1;
+}
+
+.project-card
+{
+    display: flex;
+    width: 640px;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: var(--content-background);
+}
+#projectvideo
+{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.pcard-text
+{
+    padding: 10px;
+}
+.project-desc
+{
+    padding: 10px;
+    padding-left: 0px;
 }
 
 @media (max-width: 768px) { /* 👈 Adjust breakpoint if needed */
@@ -156,5 +222,33 @@ p {
 
     .buttons {
         justify-content: center;
+    }
+}
+
+@keyframes fade-down
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade-up
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
