@@ -1,5 +1,5 @@
 :root {
-  --div-color: #151515;
+  --nav-color: #151515;
   --text-color: #ECDFCC;
   --background-color: #697565;
   --content-background: #3C3D37;
@@ -18,11 +18,15 @@ body {
 }
 
 nav {
-    position: relative;
-    background: var(--div-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--nav-color);
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     animation: fade-down 1.0s;
+    z-index: 1000;
 }
 
 .nav-container {
@@ -103,14 +107,13 @@ nav a.active {
 .content {
     max-width: 1300px;
     margin: 0 auto;
-    padding-top: 2rem;
+    padding-top: calc(2rem + 132px);
     animation: fade-up 1.0s;
 }
 
 .content :is(h1)
 {
     font-size: 1.5rem;
-    padding-left: 2.5%;
     color: var(--text-color);
 }
 
@@ -118,8 +121,8 @@ nav a.active {
     display: none;
     padding: 1.5rem;
     border-radius: 15px;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 3.5rem;
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -135,16 +138,24 @@ p {
     color: var(--text-color);
 }
 
-.content :is(h3)
+.content h3
 {
     font-size: 1.5rem;
-    color: var(--text-color);
+}
+.content h4
+{
+    font-size: 1.25rem;
+    padding-bottom: 10px;
+}
+.content .role
+{
+    font-size: 1.25rem;
 }
 
 section.work
 {
     max-width: 1300px;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-bottom: 2rem;
     border-radius: 15px;
     background-color: var(--content-background);
@@ -154,7 +165,6 @@ section.work
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
-    margin-bottom: 20px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -168,11 +178,29 @@ section.work
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
-section.workdesc
+section.workcard
 {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+.worklabel
+{
+    position: flex;
+    flex-direction: column;
+    padding: 15px;
+    padding-bottom: 0px;
+    background: var(--nav-color);
+}
+.work-text
+{
+    padding-bottom: 15px;
+}
+section.workcard > ul
+{
+    padding-left: 20px;
 }
 
 section.projects {
@@ -185,6 +213,12 @@ section.projects {
     column-gap: 0px;
     row-gap: 0px;
     opacity: 1;
+}
+
+.projectpreview iframe
+{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .project-card
@@ -202,7 +236,7 @@ section.projects {
 }
 .pcard-text
 {
-    padding: 10px;
+    padding: 15px;
 }
 .project-desc
 {
