@@ -166,6 +166,7 @@ p {
 ul.techexp
 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     column-gap: 15px;
     list-style-type: none;
