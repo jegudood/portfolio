@@ -396,7 +396,7 @@ section.education
     
     .content {
         padding: 1rem;
-        padding-top: calc(2rem + 400px); /* Adjusted for taller nav on mobile */
+        padding-top: calc(2rem + 200px);
     }
     
     .project-card {
