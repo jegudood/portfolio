@@ -32,6 +32,7 @@ nav {
 
 .nav-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     max-width: 1300px;
@@ -43,6 +44,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .profile-pic {
@@ -63,9 +65,8 @@ nav {
 .name-title {
   display: flex;
   flex-direction: column;
-  height: 100px;
-  width: 500px;
-  justify-content: baseline;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .name {
@@ -75,8 +76,8 @@ nav {
 }
 
 .title {
-  font-size: 1.5rem;
-  color: var(--text-color);
+    font-size: 1.5rem;
+    color: var(--text-color);
 }
 
 .buttons{
@@ -366,5 +367,83 @@ section.education
     {
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .brand {
+        justify-content: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .name-title {
+        width: 100%;
+        align-items: center;
+        height: auto;
+    }
+    
+    .buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .content {
+        padding: 1rem;
+        padding-top: calc(2rem + 400px); /* Adjusted for taller nav on mobile */
+    }
+    
+    .project-card {
+        width: 100%;
+    }
+    
+    section.workcard {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .worklabel {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    section.education {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    ul.techexp {
+        justify-content: center;
+        gap: 1rem;
+        font-size: 2.5rem;
+    }
+    
+    .content h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .name {
+        font-size: 1.5rem;
+    }
+    
+    .title {
+        font-size: 1rem;
+    }
+    
+    .buttons {
+        font-size: 2rem;
     }
 }
