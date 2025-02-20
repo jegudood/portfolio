@@ -285,6 +285,12 @@ section.projects {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
+.projectpreview img
+{
+    width: 640px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
 
 .project-card
 {
