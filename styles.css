@@ -177,6 +177,7 @@ p {
     font-size: 1.1em;
     padding-bottom: 1rem;
     color: var(--text-color);
+    text-align: justify;
 }
 
 ul.techexp
@@ -435,6 +436,20 @@ section.education
     
     .content h1 {
         font-size: 1.5rem;
+    }
+
+    .section.about
+    {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    p
+    {
+        text-align: left;
+        font-size: 1em;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
