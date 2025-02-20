@@ -482,4 +482,52 @@ section.education
     {
         font-size: 1rem;
     }
+
+    .content h1
+    {
+        font-size: 1rem;
+    }
+    .content h2
+    {
+        font-size: 1rem;
+    }
+    .content h3
+    {
+        font-size: 1rem;
+    }
+    .content h4
+    {
+        font-size: 1rem;
+    }
+
+    p
+    {
+        font-size: 1rem;
+        
+    }
+
+    .content ul
+    {
+        font-size: 1.75rem;
+    }
+
+    section.workcard > ul
+    {
+        font-size: 1rem;
+    }
+
+    .pcard-text > ul
+    {
+        font-size: 1rem;
+    }
+
+    .pcard-icons
+    {
+        font-size: 1rem;
+    }
+
+    .edu-school ul
+    {
+        font-size: 1rem;
+    }
 }
