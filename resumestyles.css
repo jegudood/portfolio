@@ -1,0 +1,306 @@
+:root
+{
+    --background: #30312c;
+    --text-color: black;
+    --info-text-color: #ECDFCC;
+    --background-color: #151515;
+}
+
+body
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    background-color: var(--background);
+}
+
+.printButton
+{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--background-color);
+    color: var(--info-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.downloadButton
+{
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--background-color);
+    color: var(--info-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.printButton:hover, .downloadButton:hover
+{
+    background-color: #ACBFA5;
+    color: var(--background-color);
+}
+
+.resumeCanvas
+{
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 210mm;
+    height: 296mm;
+}
+
+.summaryInfo
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.resume
+{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background-color);
+}
+
+.nameTitle
+{
+    padding: 0.3in;
+    width: 250px;
+    color: var(--info-text-color);
+}
+
+h1
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    margin-top: 0px;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+h3
+{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.nameTitle hr, .languages hr, .techSkills hr, .softSkills hr, .volunteering hr, .jobs hr
+{
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: none;
+    margin: 0;
+    min-height: 1px;
+    background-color: var(--info-text-color);
+}
+
+.contactInfo
+{
+    height: 12rem;
+    padding-left: 0.3in;
+    padding-right: 0.3in;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    color: var(--info-text-color);
+}
+
+.info
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    column-gap: 1rem;
+}
+.info i
+{
+    width: 2rem;
+    font-size: 1.2rem;
+    align-self: center;
+}
+
+.info p
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+    font-size: 1rem;
+}
+
+.languages, .techSkills, .softSkills, .volunteering, .jobs
+{
+    padding-left: 0.3in;
+    padding-right: 0.3in;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    color: var(--info-text-color);
+}
+
+.languages
+{
+    height: 6rem;
+}
+
+.techSkills
+{
+    height: 11rem;
+}
+
+.softSkills
+{
+    height: 8.5rem;
+}
+
+.volunteering
+{
+    height: 6.5rem;
+}
+
+.jobs
+{
+    height: 10rem;
+}
+
+.languages h3, .techSkills h3, .softSkills h3, .volunteering h3, .jobs h3
+{
+    margin: 0;
+}
+.languages ul, .techSkills ul, .softSkills ul, .volunteering ul, .jobs ul
+{
+    width: 225px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    margin-top: 0;
+    padding-left: 1rem;
+}
+
+.vr
+{
+    width: 0px;
+    background-color: black;
+}
+
+h4
+{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+h5
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 0.9rem;
+}
+
+.experience
+{
+    padding-left: 0.3in;
+    padding-right: 0.3in;
+    width: 100%;
+    background-color: white;
+}
+
+.experience hr
+{
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: none;
+    margin: 0;
+    min-height: 1px;
+    margin-top: 1rem;
+    background-color: black;
+}
+
+.workplace
+{
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+}
+.workplace p
+{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.workplace ul, .education ul
+{
+    text-wrap: wrap;
+    font-size: 0.9rem;
+    margin-top: 0;
+    padding-left: 2rem;
+}
+
+.projects h4, .learnings h4, .education h4
+{
+    margin-top: 1rem;
+}
+
+.projects h5, .education h5
+{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.projects p, .learnings p, .education p
+{
+    margin-top: 0;
+}
+
+@media print
+{
+    .resume
+    {
+        background-color: white;
+        color: black;
+    }
+    .nameTitle
+    {
+        color: black;
+    }
+    .nameTitle hr, .languages hr, .techSkills hr, .softSkills hr, .volunteering hr, .jobs hr
+    {
+        background-color: black;
+    }
+    .contactInfo
+    {
+        color: black;
+    }
+    .languages, .techSkills, .softSkills, .volunteering, .jobs
+    {
+        color: black;
+    }
+
+    body
+    {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background: none;
+    }
+
+    .resumeCanvas
+    {
+        margin: 0;
+        padding: 0;
+        width: 210mm;
+        height: 275mm;
+    }
+
+    .printButton, .downloadButton
+    {
+        display: none;
+    }
+}
