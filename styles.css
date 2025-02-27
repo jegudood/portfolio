@@ -359,7 +359,7 @@ section.education
     padding-left: 2rem;
     padding-bottom: 1rem;
 }
-.eduVideo
+.eduVideo, .eduVideo2
 {
     position: relative;
     width: 100%;
@@ -383,6 +383,15 @@ section.education
     height: 100%;
     border-radius: 15px;
     pointer-events: none;
+}
+.eduVideo2 iframe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
 }
 
 @keyframes fade-down
