@@ -260,6 +260,18 @@ h5
     margin-top: 0;
 }
 
+.info a
+{
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.info a:hover
+{
+    color: #ACBFA5;
+}
+
 @media print
 {
     .resume
@@ -302,5 +314,10 @@ h5
     .printButton, .downloadButton
     {
         display: none;
+    }
+
+    .info a
+    {
+        text-decoration: none;
     }
 }
