@@ -497,8 +497,9 @@ section.education
 
 @media screen and (max-width: 480px) {
     .profile-pic {
-        width: 60px;
-        height: 60px;
+        width: 0px;
+        height: 0px;
+        border: 0px solid var(--background-color);
     }
     
     .name {
